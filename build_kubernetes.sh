@@ -5,10 +5,10 @@ K8S_CLEAN_BUILD=${K8S_CLEAN_BUILD:-true}
 
 if [[ "${K8S_CLEAN_BUILD}" != "false" ]]; then
   rm -rf kubernetes/source/kubernetes/v$K8S_VERSION
-  rm -f kubernetes/master/kubernetes-master-$K8S_VERSION-1.x86_64.rpm
-  rm -f kubernetes/master/kubernetes-node-$K8S_VERSION-1.x86_64.rpm
-  rm -f kubernetes/master/kubernetes-master_$K8S_VERSION_amd64.deb
-  rm -f kubernetes/master/kubernetes-node_$K8S_VERSION_amd64.deb
+  rm -f kubernetes/builds/kubernetes-master-$K8S_VERSION-1.x86_64.rpm
+  rm -f kubernetes/builds/kubernetes-node-$K8S_VERSION-1.x86_64.rpm
+  rm -f kubernetes/builds/kubernetes-master_$K8S_VERSION_amd64.deb
+  rm -f kubernetes/builds/kubernetes-node_$K8S_VERSION_amd64.deb
 fi
 
 mkdir -p kubernetes/source/kubernetes/v$K8S_VERSION
